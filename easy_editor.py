@@ -44,22 +44,17 @@ toolbar.addWidget(btn_flip)
 toolbar.addWidget(btn_bw)
 toolbar.addWidget(btn_blur)
 
-# Правый лэйаут
 right_col = QVBoxLayout()
 
-# Размещение виджетов на правом лэйауте
 right_col.addWidget(image_preview)
 right_col.addLayout(toolbar)
 
 
-# Основной лэйаут
 main_layout = QHBoxLayout()
 
-# Размещение на основном лэйауте
 main_layout.addLayout(left_col, 1)
 main_layout.addLayout(right_col, 4)
 
-# Установка основного лэйаута
 window.setLayout(main_layout)
 
 @pyqtSlot()
@@ -74,6 +69,15 @@ def on_close(obj):
 
 window.closeEvent = on_close
 
+# def filter_files(files):
+#     ext = ['.png', '.jpg', '.jpeg', '.gif', '.bmp']
+#     filtered = []
+#     for f in files:
+#         for e in ext:
+#             if f.endswith(e):
+#                 filtered.append(f)
+#     return filtered
+
 def filter_files(files):
     ext = ['.png', '.jpg', '.jpeg', '.gif', '.bmp']
     filtered = []
@@ -82,6 +86,7 @@ def filter_files(files):
             if f.endswith(e):
                 filtered.append(f)
     return filtered
+
 
 app.exec()
 
