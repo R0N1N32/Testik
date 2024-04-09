@@ -83,21 +83,5 @@ def filter_files(files):
                 filtered.append(f)
     return filtered
 
-'''
-akshjdlkasjdlkasjdasd
-asd
-asd
-asd
-asd
-as
-d
-asd
-asd
-as
-das
-d
-a
-sd
-as'''
 app.exec()
 
